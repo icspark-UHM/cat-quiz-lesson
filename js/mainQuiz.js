@@ -27,7 +27,7 @@ function renderState(state) {
 }
 
 function changeState(newState, cats) {
-    console.log('CHANGE');
+    console.log("state is: " + newState);
     cats.forEach(cat => {
         personalities[cat]++;
         console.log(cat + personalities[cat]);
@@ -54,10 +54,12 @@ function endGame() {
         }
     }
 
+    console.log(maxCat);
+
     const text = document.getElementById('story-text');
     const storyImage = document.getElementById('story-image');
     const choicesContainer = document.getElementById('choices');
-    const catImagePath = `lil_images/${maxCat}.jpeg`;
+    const catImagePath = `lil_images/cats/${maxCat}.png`;
 
     const img = new Image();
     img.src = catImagePath;
@@ -68,7 +70,7 @@ function endGame() {
         storyImage.style.display = 'none';
         choicesContainer.style.display = 'none';
 
-        text.textContent = "Drumroll... here is your Veggie ID! Don't lose it! (Right click or hold the image to save)";
+        text.textContent = `Drumroll... YOU ARE A ${maxCat}! WOAH! (Right click or hold the image to save)`;
         text.appendChild(img);
     }
 
@@ -78,7 +80,7 @@ function startGame() {
     document.querySelector('.title').style.display = 'none';
     document.getElementById('homescreen').style.display = 'none';
     document.querySelector('.start-button').style.display = 'none';
-    document.getElementById('game-container').style.display = 'block';
+    document.getElementById('game-container').style.display = 'flex';
     renderState(currentState);
 }
 

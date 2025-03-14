@@ -1,62 +1,72 @@
 export const personalities = {
-    "Placeholder": 0, // Empty set
-    "Grumpy": 0, // The Analyst
-    "Shy": 0, // The Reserved
-    "Speedy" : 0, // The Hasty
-    "Happy" : 0, // The Connector
+    "angry": 0, // Empty set
+    "orange": 0, // The Analyst
+    "thousand": 0, // The Reserved
+    "iua" : 0, // The Hasty
+    "oop" : 0, // The Connector
 };
 
 export const states = [
     {
         id:0, // first "default" state
-        text: "Question 1",
-        image: "https://placehold.co/500",
+        text: "What is the best way to relax?",
+        image: "lil_images/story/relax.png",
         choices: {
-            "The lake": ["Grumpy"],
-            "12.5 mile hike to the peak of a glorious mountain": ["Speedy"]
+            "read a book": ["orange", "iua"],
+            "play video games": ["thousand", "angry"],
+            "go to the beach": ["oop", "iua"],
+            "do absolutely nothing": ["angry", "oop"]
         }
     },
     {
         id:1, // section 1A-1
-        text: "You and your friends are at the lake. What do you do?",
-        image: "https://placehold.co/500",
+        text: "What is your favorite color?",
+        image: "lil_images/story/rainbow.png",
         choices: {
-            "Swim": ["Grumpy"],
-            "Fish": ["Placeholder"]
+            "blue": ["iua", "orange"],
+            "yellow": ["angry", "oop"],
+            "red": ["thousand", "orange"],
+            "some mixture of the above": ["thousand", "iua"]
         }
     },
     {
         id:2, // section 1A-2
-        text: "OH NO! While swimming, you get attacked by a shark!",
-        image: "https://placehold.co/500",
+        text: "What kind of bread is best?",
+        image: "lil_images/story/baked.png",
         choices: {
-            "SWIM AWAY!!": ["Grumpy"],
-            "Fight": ["Placeholder"]
+            "sourdough": ["iua", "oop"],
+            "pizza rolls": ["angry"],
+            "bagels": ["thousand", "oop"],
+            "french toast": ["orange"]
         }
     },
     {
         id:3, // section 1A-2
-        text: "OH NO! While fishing, you hook a shark!",
-        image: "https://placehold.co/500",
+        text: "would you rather have $200 now, or 20,000 v-bucks in a year?",
+        image: "lil_images/story/fortnite.png",
         choices: {
-            "Cut the line!": ["Grumpy"],
-            "Fight.": ["Placeholder"]
+            "$200 now": ["angry", "oop"],
+            "those sweet, sweet v-bucks": ["iua", "orange", "thousand"]
         }
     },
     {
         id:4, // section 1A-3
-        text: "After narrowly escaping, all you kitties have had enough of the lake for one day. Where would you like to go next?",
-        image: "https://placehold.co/500",
+        text: "what super power would you choose?",
+        image: "lil_images/story/batcat.png",
         choices: {
-            "Placeholder": ["Grumpy"]
+            "flight": ["iua"],
+            "invincibility": ["thousand", "angry"],
+            "teleportation": ["oop"],
+            "telekinesis": ["orange"]
         }
     },
     {
         id:4, // section 1A-3
-        text: "After narrowly escaping, all you kitties have had enough of the lake for one day. Where would you like to go next?",
+        text: "do you like dogs?",
         image: "https://placehold.co/500",
         choices: {
-            "Placeholder": ["Placeholder"]
+            "yes": ["angry"],
+            "no": ["thousand", "orange", "iua", "oop"]
         }
     }
 ];
