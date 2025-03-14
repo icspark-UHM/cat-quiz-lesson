@@ -2,9 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cat Quiz</title>
+  <link rel="icon" href="lil_images/stare.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="container">
+  <div class="title">What kind of cat are you?</div>
+  <img id="homescreen" style="padding-bottom: 15px" src="https://placehold.co/400" alt="Story Image"/>
+  <a href="#" class="start-button" onclick="startGame()">Start</a>
 
+  <div class="game-container" id="game-container">
+    <div class ="story-text" id="story-text"></div>
+    <div class="image-container">
+      <img id="story-image" src="https://placehold.co/500" alt="Story Image"/>
+    </div>
+    <div class="choices" id="choices"></div>
+  </div>
+</div>
+<script type="module" src="js/mainQuiz.js"></script>
 </body>
 </html>
