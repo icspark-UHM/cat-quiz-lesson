@@ -6,7 +6,7 @@ export const personalities = {
     "oop" : 0,
 };
 
-export const states = [
+export const questions = [
     {
         id:0, // first "default" state
         text: "What is the best way to relax?",

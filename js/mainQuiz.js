@@ -1,5 +1,5 @@
 import { personalities } from "./data.js";
-import { states } from "./data.js";
+import { questions } from "./data.js";
 
 /* this keeps track of which question we're on */
 let currentQuestion = 0;
@@ -22,18 +22,24 @@ function loadQuestion(question) {
     /* if you want to know more about the Image() object, just ask! */
 
     /* we need to loop for each choice in the states[question].choices and loop within choice to get each personality*/
-    for (const [choice, personality] of Object.entries(states[question].choices)) {
-        /* we need to create an element called 'button' */
-        /* code here */
-        const button = document.createElement('button');
-        /* our button's textContent needs to be equal to choice */
-        /* code here */
-        button.textContent = choice;
-        /* to get the correct css we need to give our button the class 'choice-button' */
-        button.className = 'choice-button';
+    function loadQuestion(question) {
+        const questionText = document.getElementById("question-text")
 
-        button.onclick = () => changeQuestion(currentQuestion + 1, personality); //each time you change state you update the personalities dictionary
-        choicesContainer.appendChild(button);
+        /* access the question-image */
+
+        /* access the choices element */
+
+        questionText.textContent = questions[question].text;
+
+        /* populate the question-image element */
+
+        for (const [choice, personality] of Object.entries(sta[question].choices)) {
+            /* create a button element */
+            /* populate the text of the button */
+            button.className = 'choice-button';
+            button.onclick = () => changeQuestion(currentQuestion + 1, personality);
+            /* append the button to the choices */
+        }
     }
 }
 
@@ -80,7 +86,7 @@ function endGame() {
         storyImage.src = img.src;
         choicesContainer.style.display = 'none';
 
-        text.textContent = `drumroll... you are a ${maxCat}! wow! (Right click or hold the image to save)`;
+        text.textContent = `drumroll... here are your results! (Right click or hold the image to save)`;
     }
 
 }
@@ -96,5 +102,5 @@ function startGame() {
 
 console.log("Welcome to the Personality Quiz!");
 console.log(personalities);
-console.log(states);
+console.log(questions);
 window.startGame = startGame;
