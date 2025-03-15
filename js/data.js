@@ -1,9 +1,9 @@
 export const personalities = {
-    "angry": 0, // Empty set
-    "orange": 0, // The Analyst
-    "thousand": 0, // The Reserved
-    "iua" : 0, // The Hasty
-    "oop" : 0, // The Connector
+    "angry": 0,
+    "orange": 0,
+    "thousand": 0,
+    "iua" : 0,
+    "oop" : 0,
 };
 
 export const states = [
