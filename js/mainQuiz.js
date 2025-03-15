@@ -8,39 +8,28 @@ let currentQuestion = 0;
 function loadQuestion(question) {
     /* we need to have a variable that keeps track of the element called 'story-text' */
     /* here is the first one */
-    const questionText = document.getElementById("question-text");
+    const questionText = document.getElementById('question-text');
     /* we need a variable that keeps track of an element called 'story-image' */
 
     /* we need a variable that keeps track of an element called 'choices' */
 
-    /* let's set the story images element source to states[question].image */
-
     /* we need to set the story-text elements text to the questions text */
+    questionText.textContent = questions[question].text;
+    /* let's set the story images element source to questions[question].image */
 
     /* we need to clear the choices div to make sure no other choices are there */
 
-    /* if you want to know more about the Image() object, just ask! */
-
     /* we need to loop for each choice in the states[question].choices and loop within choice to get each personality*/
-    function loadQuestion(question) {
-        const questionText = document.getElementById("question-text")
+    for (const [choice, personality] of Object.entries(questions[question].choices)) {
+        /* create a button element */
 
-        /* access the question-image */
+        /* populate the text of the button */
 
-        /* access the choices element */
-
-        questionText.textContent = questions[question].text;
-
-        /* populate the question-image element */
-
-        for (const [choice, personality] of Object.entries(sta[question].choices)) {
-            /* create a button element */
-            /* populate the text of the button */
-            button.className = 'choice-button';
-            button.onclick = () => changeQuestion(currentQuestion + 1, personality);
-            /* append the button to the choices */
-        }
+        button.className = 'choice-button';
+        button.onclick = () => changeQuestion(currentQuestion + 1, personality);
+        /* append the button to the choices */
     }
+
 }
 
 function changeQuestion(newQuestion, cats) {
@@ -72,8 +61,8 @@ function endGame() {
 
     console.log(maxCat);
 
-    const text = document.getElementById('story-text');
-    const storyImage = document.getElementById('story-image');
+    const text = document.getElementById('question-text');
+    const questionImage = document.getElementById('question-image');
     const choicesContainer = document.getElementById('choices');
     const catImagePath = `lil_images/cats/${maxCat}.png`;
 
@@ -83,7 +72,7 @@ function endGame() {
 
     // Once the image is loaded, update the DOM
     img.onload = () => {
-        storyImage.src = img.src;
+        questionImage.src = img.src;
         choicesContainer.style.display = 'none';
 
         text.textContent = `drumroll... here are your results! (Right click or hold the image to save)`;

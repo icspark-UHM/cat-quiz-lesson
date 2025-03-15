@@ -63,7 +63,7 @@ export const questions = [
     {
         id:4, // section 1A-3
         text: "do you like dogs?",
-        image: "https://placehold.co/500",
+        image: "lil_images/story/catdog.png",
         choices: {
             "yes": ["angry"],
             "no": ["thousand", "orange", "iua", "oop"]
