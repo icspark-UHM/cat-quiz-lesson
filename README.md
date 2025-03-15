@@ -7,6 +7,7 @@ In this project, we'll be going through how to dynamically add buttons to a pers
 ## Step-by-Step Guide
 
 ### Understand how the code works
+This is in `js/data.js`
 
 ```javascript
 const questions = {
@@ -74,7 +75,7 @@ const personalities = {
 
 ## Let's write the code!
 
-We need to fill our page with our question data! We need to make the process reusable so we can use it for any question!
+We need to fill our page with our question data! We need to make the process reusable so we can use it for any question! We'll edit the code in `js/mainQuiz.js`.
 
 ### Make a Function
 We're going to make a function that takes each `question` as a parameter.
