@@ -195,6 +195,4 @@ If it's not working, don't hesitate to ask! After this section is done, you shou
 
 ## Conclusion
 
-Congratulations! You've created a simple website using HTML, CSS, and JavaScript. This is just the beginning – there are many more features and technologies to explore. Keep learning and experimenting to build more complex and dynamic websites.
-
-Feel free to reach out if you have any questions or feedback. Happy coding!
+Congratulations! You've created finished the logic for the quiz and you should be able to take it yourself! If you'd like to create your own quiz for a project, this layout could work!
