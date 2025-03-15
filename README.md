@@ -89,7 +89,7 @@ function loadQuestion(question) {
 This is a snippet of the HTML for our page:
 ```xhtml
 <div class="game-container" id="game-container">
-    <div class ="question-text" id="story-text"></div>
+    <div class ="question-text" id="question-text"></div>
     <div class="image-container">
       <img id="question-image" src="https://placehold.co/500" alt="Story Image"/>
     </div>
