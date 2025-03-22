@@ -11,22 +11,25 @@ function loadQuestion(ID) {
     
     // Step 1
     let questionText = document.getElementById('question-text');
+    let questionImage = document.getElementById('question-image');
+    let choices = document.getElementById("choices");
     
     // Step 2
     questionText.innerHTML = questions[ID].text;
-    
+    questionImage.src = questions[ID].image;
     // Step 6
-    
-    // Everything inside this "for" statement will run for each choice there is in a question.
-    // If a question has 4 choices, the code inside this "for" loop will run 4 times.
-    // The code inside this loop should create a button for a choice.
+    choices.innerHTML = "";
     for (const [choice, personality] of Object.entries(questions[ID].choices)) {
         // Step 3
-        
+        let button = document.createElement("button");
+        button.innerHTML = choice;
+        button.className = "choice-button";
         // Step 4
-        
+        choices.appendChild(button);
         // Step 5
-        
+        button.addEventListener("click", function() {
+            changeQuestion(currentQuestion + 1, personality);
+        });
     }
 }
 
@@ -73,7 +76,7 @@ function endGame() {
         questionImage.src = img.src;
         choicesContainer.style.display = 'none';
 
-        text.textContent = `drumroll... here are your results! (Right click or hold the image to save)`;
+        text.textContent = `You got ${maxCat} cat!` ;
     }
 
 }
