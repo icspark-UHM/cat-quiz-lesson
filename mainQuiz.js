@@ -1,35 +1,33 @@
+// This grabs the 'personalities' and 'questions' objects from the data.js file.
 import { personalities } from "./data.js";
 import { questions } from "./data.js";
 
-/* this keeps track of which question we're on */
+// This keeps track of which question we're on
 let currentQuestion = 0;
 
-/* we pass a question to our loadQuestion function */
-function loadQuestion(question) {
-    /* we need to have a variable that keeps track of the element called 'story-text' */
-    /* here is the first one */
-    const questionText = document.getElementById('question-text');
-    /* we need a variable that keeps track of an element called 'story-image' */
-
-    /* we need a variable that keeps track of an element called 'choices' */
-
-    /* we need to set the story-text elements text to the questions text */
-    questionText.textContent = questions[question].text;
-    /* let's set the story images element source to questions[question].image */
-
-    /* we need to clear the choices div to make sure no other choices are there */
-
-    /* we need to loop for each choice in the states[question].choices and loop within choice to get each personality*/
-    for (const [choice, personality] of Object.entries(questions[question].choices)) {
-        /* create a button element */
-
-        /* populate the text of the button */
-
-        button.className = 'choice-button';
-        button.onclick = () => changeQuestion(currentQuestion + 1, personality);
-        /* append the button to the choices */
+// Let's complete this function
+function loadQuestion(ID) {
+    // The loadQuestion function should update the text, images, and buttons of the question with the ID given.
+    
+    // Step 1
+    let questionText = document.getElementById('question-text');
+    
+    // Step 2
+    questionText.innerHTML = questions[ID].text;
+    
+    // Step 6
+    
+    // Everything inside this "for" statement will run for each choice there is in a question.
+    // If a question has 4 choices, the code inside this "for" loop will run 4 times.
+    // The code inside this loop should create a button for a choice.
+    for (const [choice, personality] of Object.entries(questions[ID].choices)) {
+        // Step 3
+        
+        // Step 4
+        
+        // Step 5
+        
     }
-
 }
 
 function changeQuestion(newQuestion, cats) {
