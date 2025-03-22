@@ -76,7 +76,7 @@ function endGame() {
         questionImage.src = img.src;
         choicesContainer.style.display = 'none';
 
-        text.textContent = `You got ${maxCat} cat!` ;
+        text.textContent = `You got ${maxCat} cat!`;
     }
 
 }
