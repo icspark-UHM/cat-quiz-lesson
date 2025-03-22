@@ -1,0 +1,8 @@
+{
+    "name": "icspark-webdev-env",
+    "image": "mcr.microsoft.com/devcontainers/universal:2",
+    "extensions": [
+      "ms-vscode.live-server"
+    ],
+    "forwardPorts": [3000, 3001]
+  }
