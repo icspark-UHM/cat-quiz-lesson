@@ -17,9 +17,6 @@ function loadQuestion(ID) {
     
     // Step 6
     
-    // Everything inside this "for" statement will run for each choice there is in a question.
-    // If a question has 4 choices, the code inside this "for" loop will run 4 times.
-    // The code inside this loop should create a button for a choice.
     for (const [choice, personality] of Object.entries(questions[ID].choices)) {
         // Step 3
         

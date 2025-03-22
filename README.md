@@ -113,15 +113,15 @@ Since this function is supposed to update and change things on the page, we'll n
 
 ✅ Under `//Step 1`, Store three things into variables:
   - The 'question-text' element
+    - This has been done for you.
   - The 'question-image' element
   - The 'choices' element
 
-The first element has already been done for you.
 
 ### Step 2: Changing the HTML elements
 Now, lets update the page by editing the elements we just grabbed.
 
-We need to put our text from the question into our `questionText` element. Remember, `questions` is an **array** of objects, and we're looking for a property from one of those objects. In order to do this, we need to know which question we're getting the text from. Luckily, look at our function definition:
+We need to put our text from the question into our `questionText` element. Remember, `questions` is an **array** of objects, and we're looking for a property from one of those objects. In order to do this, we'll need to know from which question in the array we're getting the text from. Luckily, look at our function definition:
 
 ```javaScript
 function loadQuestion(ID) {
@@ -131,9 +131,8 @@ It has a parameter called `ID` that should be the ID of the question we're looki
 
 ✅ Under `//Step 2`, update:
   - Your question text variable's innerHTML to the `text` property from the correct object in the `questions` array.
+    - This has been done for you.
   - Your question image variable's src to the `image` property from the correct object in the`questions` array.
-
-The question text has already been done for you.
 
 ### Test it!
 
@@ -166,7 +165,7 @@ export let questions = [
 The choices property is an object with four properties. This means we need to create four buttons for the user to press. In order to do this, we'll need to use a loop in order to loop through each choice. We have not taught how to do this yet, so the loop statement is already done.
 
 ```javascript
-for (const [choice, personality] of Object.entries(states[question].choices)) {
+for (const [choice, personality] of Object.entries(questions[ID].choices)) {
   // Step 3
 }
 ```
@@ -210,13 +209,9 @@ Now let's test our website again. When we press the start button, we should have
 
 ### Step 5: Making the buttons do something
 
-Later in the code is a function called `changeQuestion()` that we want to call when the button presses. Specifically, we want the code:
+Later in the code is a function called `changeQuestion()` that we want to call when the button presses. Specifically, we want the code `changeQuestion(currentQuestion + 1, personality);` to run only when the button is clicked.
 
-```javaScript
-changeQuestion(currentQuestion + 1, personality);
-```
-
-to run when clicked.
+✅ Do not copy and paste this line into the code, not yet.
 
 To do this, we'll add an **event listener** to our button, that will listen for a click. When clicked, it should run that code. Let's recall what the code for adding an event listener looks like:
 
