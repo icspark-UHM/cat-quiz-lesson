@@ -70,7 +70,7 @@ function endGame() {
         questionImage.src = img.src;
         choicesContainer.style.display = 'none';
 
-        text.textContent = `drumroll... here are your results! (Right click or hold the image to save)`;
+        text.textContent = `You got ${maxCat} cat!`;
     }
 
 }
